@@ -16,10 +16,10 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   flutter_svg: ^2.0.10+1
-  font_awesome_flutter: ^10.7.0
+  font_awesome_flutter: ^11.0.0
   github: ^9.24.0
   http: ^1.2.2
-  intl: ^0.19.0
+  intl: ^0.20.2
   percent_indicator: ^4.2.3
   timelines_plus: ^1.0.3
   url_launcher: ^6.3.0

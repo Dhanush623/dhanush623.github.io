@@ -32,6 +32,7 @@ class AppConstants {
   static const String css = "CSS";
   static const String js = "JavaScript";
   static const String ts = "TypeScript";
+  static const String ror = "Ruby on Rails";
   static const String git = "Git";
   static const String elasticSearch = "Elastic Search";
   static const String redis = "Redis";
@@ -45,6 +46,7 @@ class AppConstants {
   static const String cssUrl = "https://www.w3schools.com/css/";
   static const String jsUrl = "https://www.w3schools.com/js/";
   static const String tsUrl = "https://www.typescriptlang.org/";
+  static const String rorUrl = "https://www.ruby-lang.org/en/s";
   static const String gitUrl = "https://git-scm.com/";
   static const String elasticSearchUrl = "https://www.elastic.co/elasticsearch";
   static const String redisUrl = "https://redis.io/";
@@ -76,10 +78,11 @@ class AppConstants {
       "Senior Software Engnieer Level 1";
   static const String seniorSoftwareEngnieerLevel2 =
       "Senior Software Engnieer Level 2";
-  static const String seniorSoftwareEngnieerLevel3 =
-      "Senior Software Engnieer Level 3";
   static DateTime seniorSoftwareEngnieerLevel1StartDate = DateTime(2023, 4, 1);
   static DateTime seniorSoftwareEngnieerLevel2StartDate = DateTime(2024, 7, 30);
+  static DateTime mxSeniorSoftwareEngineerLevel1EndDate = DateTime(2026, 2, 28);
+  static DateTime mxSeniorSoftwareEngineerLevel2StartDate =
+      DateTime(2026, 3, 1);
   static const String softwareEngnieer = "Software Engnieer";
   static DateTime softwareEngnieerStartDate = DateTime(2020, 10, 1);
   static const String softwareEngnieerTrainee = "Software Engnieer Trainee";
@@ -211,6 +214,12 @@ class AppConstants {
       iconUrl: AppAssets.ionic,
       url: ionicUrl,
     ),
+    Skill(
+      title: ror,
+      score: 50.0,
+      iconUrl: AppAssets.ror,
+      url: rorUrl,
+    ),
   ];
   static List<ExperienceItem> experiences = [
     ExperienceItem(
@@ -219,8 +228,16 @@ class AppConstants {
       mode: modeFullTime,
       designations: [
         Designation(
-          role: seniorSoftwareEngnieerLevel3,
+          role: seniorSoftwareEngnieerLevel2,
+          startDate: mxSeniorSoftwareEngineerLevel2StartDate,
+          location: chennai,
+          mode: modeFullTime,
+          skills: [ts, ror],
+        ),
+        Designation(
+          role: seniorSoftwareEngnieerLevel1,
           startDate: seniorSoftwareEngnieerLevel2StartDate,
+          endDate: mxSeniorSoftwareEngineerLevel1EndDate,
           location: chennai,
           mode: modeFullTime,
           skills: [ts],
