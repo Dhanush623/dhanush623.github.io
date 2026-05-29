@@ -14,6 +14,7 @@ class AppAssets {
   static const String redis = "assets/svg/icons8-redis.svg";
   static const String linkedin = "assets/svg/icons8-linkedin.svg";
   static const String ionic = "assets/svg/icons8-ionic.svg";
+  static const String ror = "assets/svg/icons8-ruby-gem.svg";
 
   // ICONS
   static const String fincalc = "assets/icons/my_works/fincalc_icon.png";
