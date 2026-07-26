@@ -39,6 +39,22 @@ void main() {
       }
     });
 
+    testWidgets('shows a description and tech stack per project', (
+      tester,
+    ) async {
+      await _pumpDashboard(tester, const Size(1440, 900));
+
+      for (final work in AppConstants.myWorkList) {
+        expect(find.text(work.description), findsOneWidget);
+        for (final tech in work.techStack) {
+          expect(find.text(tech), findsWidgets);
+        }
+        for (final link in work.links) {
+          expect(find.text(link.label), findsWidgets);
+        }
+      }
+    });
+
     testWidgets('lays out at an awkward tablet width', (tester) async {
       await _pumpDashboard(tester, const Size(768, 1024));
 

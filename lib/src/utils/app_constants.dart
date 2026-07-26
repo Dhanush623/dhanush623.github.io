@@ -86,7 +86,22 @@ class AppConstants {
   static const String viewApplication = "View Application";
   static const String viewArticle = "View Article";
   static const String viewSource = "View Source";
+  static const String dart = "Dart";
+  static const String provider = "Provider";
+  static const String admob = "AdMob";
+  static const String firestore = "Cloud Firestore";
+  static const String firebaseAuth = "Firebase Auth";
   static const String finCalc = "FinCalc";
+  static const String finCalcDescription =
+      "A finance calculator suite for EMI, home and vehicle loans, SIP, "
+      "lumpsum, SWP, fixed and recurring deposits, PPF, GST and simple or "
+      "compound interest — every result broken down with charts.";
+  static const String totodoDescription =
+      "A to-do app that keeps tasks in sync across devices: Google sign in, "
+      "Firestore storage, image attachments and local reminder notifications.";
+  static const String flutterWidgetDescription =
+      "An article on why a widget class and a function that returns a widget "
+      "behave differently in Flutter, and what that means for rebuilds.";
   static const String finCalcUrl =
       "https://play.google.com/store/apps/details?id=com.softly.finance";
   static const String finCalcSourceUrl =
@@ -142,36 +157,55 @@ class AppConstants {
     MenuItem(title: skills),
     MenuItem(title: contact),
   ];
-  static List<MyWork> myWorkList = [
+  static const List<MyWork> myWorkList = [
     MyWork(
       title: finCalc,
-      source: finCalcUrl,
-      buttonName: viewApplication,
+      description: finCalcDescription,
       image: AppAssets.fincalc,
-    ),
-    MyWork(
-      title: finCalc,
-      source: finCalcSourceUrl,
-      buttonName: viewSource,
-      image: AppAssets.fincalc,
+      techStack: [flutter, dart, provider, firebase, admob],
+      links: [
+        WorkLink(
+          kind: WorkLinkKind.application,
+          label: viewApplication,
+          url: finCalcUrl,
+        ),
+        WorkLink(
+          kind: WorkLinkKind.source,
+          label: viewSource,
+          url: finCalcSourceUrl,
+        ),
+      ],
     ),
     MyWork(
       title: totodo,
-      source: totodoUrl,
-      buttonName: viewApplication,
+      description: totodoDescription,
       image: AppAssets.totodo,
-    ),
-    MyWork(
-      title: totodo,
-      source: totodoSourceUrl,
-      buttonName: viewSource,
-      image: AppAssets.totodo,
+      techStack: [flutter, dart, firestore, firebaseAuth, provider],
+      links: [
+        WorkLink(
+          kind: WorkLinkKind.application,
+          label: viewApplication,
+          url: totodoUrl,
+        ),
+        WorkLink(
+          kind: WorkLinkKind.source,
+          label: viewSource,
+          url: totodoSourceUrl,
+        ),
+      ],
     ),
     MyWork(
       title: flutterWidget,
-      source: flutterWidgetUrl,
-      buttonName: viewArticle,
+      description: flutterWidgetDescription,
       image: AppAssets.linkedin,
+      techStack: [flutter, dart],
+      links: [
+        WorkLink(
+          kind: WorkLinkKind.article,
+          label: viewArticle,
+          url: flutterWidgetUrl,
+        ),
+      ],
     ),
   ];
   static List<Skill> skillList = [
