@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+
 import 'package:portfolio/src/services/url_service.dart';
 import 'package:portfolio/src/utils/app_constants.dart';
+import 'package:portfolio/src/utils/app_dimens.dart';
+import 'package:portfolio/src/widgets/section_heading.dart';
 import 'package:portfolio/src/widgets/skill_card.dart';
 
 class Skills extends StatelessWidget {
@@ -11,39 +14,34 @@ class Skills extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(
-          height: 16,
+        const SectionHeading(
+          label: AppConstants.skillsLabel,
+          title: AppConstants.skillsTitle,
+          subtitle: AppConstants.skillsSubtitle,
         ),
-        Text(
-          AppConstants.skills,
-          style: Theme.of(context).textTheme.titleLarge,
-        ),
+        const SizedBox(height: AppSpacing.lg),
         GridView.builder(
           shrinkWrap: true,
           primary: false,
           physics: const NeverScrollableScrollPhysics(),
-          padding: const EdgeInsets.all(8),
           itemCount: AppConstants.skillList.length,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: _crossAxisCount(context),
-            childAspectRatio: 3,
+          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+            maxCrossAxisExtent: 280,
+            mainAxisExtent: 104,
+            crossAxisSpacing: AppSpacing.md,
+            mainAxisSpacing: AppSpacing.md,
           ),
-          itemBuilder: (context, index) => GestureDetector(
-            onTap: () {
-              if (AppConstants.skillList[index].url != null) {
-                UrlService().lanchUrl(AppConstants.skillList[index].url ?? "");
-              }
-            },
-            child: SkillCard(skill: AppConstants.skillList[index]),
-          ),
+          itemBuilder: (context, index) {
+            final skill = AppConstants.skillList[index];
+            return SkillCard(
+              skill: skill,
+              onTap: skill.url == null
+                  ? null
+                  : () => UrlService().lanchUrl(skill.url!),
+            );
+          },
         ),
       ],
     );
-  }
-
-  int _crossAxisCount(BuildContext context) {
-    double screenWidth = MediaQuery.sizeOf(context).width;
-    int crossAxisCount = (screenWidth / 200).floor();
-    return crossAxisCount > 0 ? crossAxisCount : 1;
   }
 }
