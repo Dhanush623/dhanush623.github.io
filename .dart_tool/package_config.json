@@ -471,8 +471,8 @@
     }
   ],
   "generator": "pub",
-  "generatorVersion": "3.12.0",
+  "generatorVersion": "3.12.2",
   "flutterRoot": "file:///Users/dhanush/fvm/versions/stable",
-  "flutterVersion": "3.44.0",
+  "flutterVersion": "3.44.8",
   "pubCache": "file:///Users/dhanush/.pub-cache"
 }

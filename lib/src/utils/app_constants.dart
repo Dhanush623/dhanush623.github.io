@@ -15,7 +15,39 @@ class AppConstants {
   static const String menu = "Menu";
   static DateTime startDate = DateTime(2018, 5);
   static String aboutMessage =
-      "Hi, I am $name a seasoned professional with over ${DateService().getExperienceYears().years} years ${DateService().getExperienceYears().months} months of experience in the software industry. My expertise spans both frontend development and middleware development, making me proficient in crafting engaging user interfaces while seamlessly integrating them with robust backend systems";
+      "A software engineer with over ${DateService().getExperienceYears().years} years ${DateService().getExperienceYears().months} months in the industry. My expertise spans both frontend and middleware development, so I can craft engaging user interfaces and wire them up to robust backend systems.";
+  static const String greeting = "Hello, I'm";
+  static const String basedIn = "Chennai, India";
+  static const String getInTouch = "Get in touch";
+  static const String viewGithub = "GitHub";
+  static const String viewLinkedIn = "LinkedIn";
+  static const String phone = "Phone";
+  static const String email = "Email";
+  static const String github = "GitHub";
+  static const String linkedIn = "LinkedIn";
+
+  // Section eyebrow labels and descriptions.
+  static const String aboutLabel = "01 / About";
+  static const String aboutTitle = "A bit about me";
+  static const String experienceTitle = "Where I have worked";
+  static const String experienceLabelTag = "02 / Career";
+  static const String experienceSubtitle =
+      "Roles and the stacks I shipped with along the way.";
+  static const String myWorksLabel = "03 / Projects";
+  static const String myWorksTitle = "Things I have built";
+  static const String myWorksSubtitle =
+      "Apps on the Play Store and writing I have published.";
+  static const String skillsLabel = "04 / Toolbox";
+  static const String skillsTitle = "Tech I work with";
+  static const String skillsSubtitle =
+      "Tap any card to read more about the technology.";
+  static const String contactLabel = "05 / Contact";
+  static const String contactTitle = "Let's build something";
+  static const String contactSubtitle =
+      "The quickest way to reach me is email — I reply to everything.";
+  static const String backToTop = "Back to top";
+  static const String toggleTheme = "Toggle light / dark theme";
+
   static const String copyright = "© Copyright ";
   static const String builtMessage = "Built with ❤️ by $name";
   static const String mobileNumber = "9578268884";
@@ -68,37 +100,37 @@ class AppConstants {
       "https://www.linkedin.com/pulse/class-vs-function-flutter-widget-dhanush-rajamohan-bvbqc/?trackingId=QHOHdt3%2FTdiWgKJJ2gsehQ%3D%3D";
   static List<String> imageList = [AppAssets.image1, AppAssets.image2];
   static const String modeFullTime = "Full Time";
-  static const String softwareEngnieerLevel1 = "Software Engnieer Level 1";
-  static DateTime softwareEngnieerLevel1StartDate = DateTime(2021, 10, 20);
-  static DateTime softwareEngnieerLevel1EndDate = DateTime(2022, 3, 31);
-  static const String softwareEngnieerLevel2 = "Software Engnieer Level 2";
-  static DateTime softwareEngnieerLevel2StartDate = DateTime(2022, 4, 1);
-  static DateTime softwareEngnieerLevel2EndDate = DateTime(2023, 3, 31);
-  static const String seniorSoftwareEngnieerLevel1 =
-      "Senior Software Engnieer Level 1";
-  static const String seniorSoftwareEngnieerLevel2 =
-      "Senior Software Engnieer Level 2";
-  static DateTime seniorSoftwareEngnieerLevel1StartDate = DateTime(2023, 4, 1);
-  static DateTime seniorSoftwareEngnieerLevel2StartDate = DateTime(2024, 7, 30);
+  static const String softwareEngineerLevel1 = "Software Engineer Level 1";
+  static DateTime softwareEngineerLevel1StartDate = DateTime(2021, 10, 20);
+  static DateTime softwareEngineerLevel1EndDate = DateTime(2022, 3, 31);
+  static const String softwareEngineerLevel2 = "Software Engineer Level 2";
+  static DateTime softwareEngineerLevel2StartDate = DateTime(2022, 4, 1);
+  static DateTime softwareEngineerLevel2EndDate = DateTime(2023, 3, 31);
+  static const String seniorSoftwareEngineerLevel1 =
+      "Senior Software Engineer Level 1";
+  static const String seniorSoftwareEngineerLevel2 =
+      "Senior Software Engineer Level 2";
+  static DateTime seniorSoftwareEngineerLevel1StartDate = DateTime(2023, 4, 1);
+  static DateTime seniorSoftwareEngineerLevel2StartDate = DateTime(2024, 7, 30);
   static DateTime mxSeniorSoftwareEngineerLevel1EndDate = DateTime(2026, 2, 28);
   static DateTime mxSeniorSoftwareEngineerLevel2StartDate =
       DateTime(2026, 3, 1);
-  static const String softwareEngnieer = "Software Engnieer";
-  static DateTime softwareEngnieerStartDate = DateTime(2020, 10, 1);
-  static const String softwareEngnieerTrainee = "Software Engnieer Trainee";
-  static DateTime softwareEngnieerTraineeStartDate = DateTime(2019, 4, 1);
-  static DateTime softwareEngnieerTraineeEndDate = DateTime(2020, 9, 30);
-  static const String softwareDeveloperIntership =
+  static const String softwareEngineer = "Software Engineer";
+  static DateTime softwareEngineerStartDate = DateTime(2020, 10, 1);
+  static const String softwareEngineerTrainee = "Software Engineer Trainee";
+  static DateTime softwareEngineerTraineeStartDate = DateTime(2019, 4, 1);
+  static DateTime softwareEngineerTraineeEndDate = DateTime(2020, 9, 30);
+  static const String softwareDeveloperInternship =
       "Software Developer Internship";
-  static DateTime softwareDeveloperIntershipStartDate = DateTime(2018, 5, 1);
-  static DateTime softwareDeveloperIntershipEndDate = DateTime(2019, 3, 31);
+  static DateTime softwareDeveloperInternshipStartDate = DateTime(2018, 5, 1);
+  static DateTime softwareDeveloperInternshipEndDate = DateTime(2019, 3, 31);
   static const String atribs = "ATRIBS SOFTWARE SYSTEMS PVT LTD";
   static DateTime atribsStartDate = DateTime(2018, 5, 1);
   static DateTime atribsEndDate = DateTime(2021, 8, 19);
   static const String msf = "Market Simplified India Limited";
   static DateTime msfStartDate = DateTime(2021, 8, 20);
   static DateTime msfendDate = DateTime(2024, 7, 29);
-  static String dateFormat = "dd/MMM/yyyy";
+  static String dateFormat = "MMM yyyy";
   static String current = "Current";
   static String chennai = "Chennai, Tamil Nadu";
   static const String mx = "MX Build Technologies India Pvt. Ltd";
@@ -228,15 +260,15 @@ class AppConstants {
       mode: modeFullTime,
       designations: [
         Designation(
-          role: seniorSoftwareEngnieerLevel2,
+          role: seniorSoftwareEngineerLevel2,
           startDate: mxSeniorSoftwareEngineerLevel2StartDate,
           location: chennai,
           mode: modeFullTime,
           skills: [ts, ror],
         ),
         Designation(
-          role: seniorSoftwareEngnieerLevel1,
-          startDate: seniorSoftwareEngnieerLevel2StartDate,
+          role: seniorSoftwareEngineerLevel1,
+          startDate: seniorSoftwareEngineerLevel2StartDate,
           endDate: mxSeniorSoftwareEngineerLevel1EndDate,
           location: chennai,
           mode: modeFullTime,
@@ -251,25 +283,25 @@ class AppConstants {
       mode: modeFullTime,
       designations: [
         Designation(
-          role: seniorSoftwareEngnieerLevel1,
-          startDate: seniorSoftwareEngnieerLevel1StartDate,
+          role: seniorSoftwareEngineerLevel1,
+          startDate: seniorSoftwareEngineerLevel1StartDate,
           endDate: msfendDate,
           location: chennai,
           mode: modeFullTime,
           skills: [ktor, springBoot, redis, elasticSearch],
         ),
         Designation(
-          role: softwareEngnieerLevel2,
-          startDate: softwareEngnieerLevel2StartDate,
-          endDate: softwareEngnieerLevel2EndDate,
+          role: softwareEngineerLevel2,
+          startDate: softwareEngineerLevel2StartDate,
+          endDate: softwareEngineerLevel2EndDate,
           location: chennai,
           mode: modeFullTime,
           skills: [reactNative],
         ),
         Designation(
-          role: softwareEngnieerLevel1,
-          startDate: softwareEngnieerLevel1StartDate,
-          endDate: softwareEngnieerLevel1EndDate,
+          role: softwareEngineerLevel1,
+          startDate: softwareEngineerLevel1StartDate,
+          endDate: softwareEngineerLevel1EndDate,
           location: chennai,
           mode: modeFullTime,
           skills: [reactNative],
@@ -283,25 +315,25 @@ class AppConstants {
       mode: modeFullTime,
       designations: [
         Designation(
-          role: softwareEngnieer,
-          startDate: softwareEngnieerStartDate,
+          role: softwareEngineer,
+          startDate: softwareEngineerStartDate,
           endDate: atribsEndDate,
           location: chennai,
           mode: modeFullTime,
           skills: [flutter, reactNative],
         ),
         Designation(
-          role: softwareEngnieerTrainee,
-          startDate: softwareEngnieerTraineeStartDate,
-          endDate: softwareEngnieerTraineeEndDate,
+          role: softwareEngineerTrainee,
+          startDate: softwareEngineerTraineeStartDate,
+          endDate: softwareEngineerTraineeEndDate,
           location: chennai,
           mode: modeFullTime,
           skills: [flutter, reactNative],
         ),
         Designation(
-          role: softwareDeveloperIntership,
-          startDate: softwareDeveloperIntershipStartDate,
-          endDate: softwareDeveloperIntershipEndDate,
+          role: softwareDeveloperInternship,
+          startDate: softwareDeveloperInternshipStartDate,
+          endDate: softwareDeveloperInternshipEndDate,
           location: chennai,
           mode: modeFullTime,
           skills: [flutter, reactNative, ionic],
